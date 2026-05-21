@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XOX — Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>XOX</h1>
+      <p class="subtitle">Tic Tac Toe</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Score">
+      <div class="score x-score">
+        <span class="label">X</span>
+        <span id="score-x" class="value">0</span>
+      </div>
+      <div class="score draws">
+        <span class="label">Draw</span>
+        <span id="score-draw" class="value">0</span>
+      </div>
+      <div class="score o-score">
+        <span class="label">O</span>
+        <span id="score-o" class="value">0</span>
+      </div>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite">X's turn</p>
+
+    <div id="board" class="board" role="grid" aria-label="Game board">
+      <button type="button" class="cell" data-index="0" aria-label="Cell 1"></button>
+      <button type="button" class="cell" data-index="1" aria-label="Cell 2"></button>
+      <button type="button" class="cell" data-index="2" aria-label="Cell 3"></button>
+      <button type="button" class="cell" data-index="3" aria-label="Cell 4"></button>
+      <button type="button" class="cell" data-index="4" aria-label="Cell 5"></button>
+      <button type="button" class="cell" data-index="5" aria-label="Cell 6"></button>
+      <button type="button" class="cell" data-index="6" aria-label="Cell 7"></button>
+      <button type="button" class="cell" data-index="7" aria-label="Cell 8"></button>
+      <button type="button" class="cell" data-index="8" aria-label="Cell 9"></button>
+    </div>
+
+    <div class="actions">
+      <button type="button" id="restart" class="btn primary">New game</button>
+      <button type="button" id="reset-scores" class="btn secondary">Reset scores</button>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
