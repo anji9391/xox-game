@@ -1,13 +1,64 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Games</title>
-
-  <meta http-equiv="refresh"
-        content="0; url=https://anji9391.github.io/snake-game">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Snake — play in your browser." />
+  <meta name="theme-color" content="#c3ddb0" />
+  <title>Snake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="game-app">
+    <header class="game-toolbar" aria-label="Game controls">
+      <div class="score-panel">
+        <div class="score-block">
+          <span class="score-label">Score</span>
+          <span class="score-value" id="score-display">0</span>
+        </div>
+        <div class="score-block">
+          <span class="score-label">Best</span>
+          <span class="score-value" id="best-display">0</span>
+        </div>
+        <div class="score-block score-block--speed" id="speed-panel" hidden>
+          <span class="score-label">Speed</span>
+          <span class="score-value" id="speed-display">1</span>
+        </div>
+      </div>
+      <div class="control-panel">
+        <button type="button" class="btn btn-play" id="btn-play" aria-label="Play or resume">
+          <span class="btn-icon" aria-hidden="true">▶</span>
+          <span class="btn-text">Play</span>
+        </button>
+        <button type="button" class="btn btn-pause" id="btn-pause" aria-label="Pause" disabled>
+          <span class="btn-icon" aria-hidden="true">❚❚</span>
+          <span class="btn-text">Pause</span>
+        </button>
+        <button type="button" class="btn btn-reset" id="btn-reset" aria-label="Reset game">
+          <span class="btn-icon" aria-hidden="true">↺</span>
+          <span class="btn-text">Reset</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="game-main">
+      <div class="game-shell" id="board-frame">
+        <div class="board-wrap" id="board-wrap">
+          <canvas id="game" aria-label="Snake game board"></canvas>
+        </div>
+      </div>
+      <nav class="touch-pad" id="touch-pad" aria-label="Direction controls">
+        <button type="button" class="pad-btn pad-up" data-dx="0" data-dy="-1" aria-label="Move up">▲</button>
+        <button type="button" class="pad-btn pad-left" data-dx="-1" data-dy="0" aria-label="Move left">◀</button>
+        <button type="button" class="pad-btn pad-right" data-dx="1" data-dy="0" aria-label="Move right">▶</button>
+        <button type="button" class="pad-btn pad-down" data-dx="0" data-dy="1" aria-label="Move down">▼</button>
+      </nav>
+      <p class="game-hint" id="game-hint">Arrow keys or swipe to move · Space to pause</p>
+    </main>
+  </div>
+  <script src="js/game.js"></script>
 </body>
 </html>
