@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB21MVE8Y"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FB21MVE8Y"></script>
 
-<script>
-  window.dataLayer = window.dataLayer || [];
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);}
 
-  gtag('js', new Date());
+    gtag('js', new Date());
+    gtag('config', 'G-0FB21MVE8Y');
+  </script>
 
-  gtag('config', 'G-0FB21MVE8Y');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -34,29 +34,42 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <main class="app">
+
     <header>
       <h1>XOX</h1>
       <p class="subtitle">Tic Tac Toe</p>
     </header>
+
+    <!-- Games Button -->
+    <div class="actions">
+      <a href="/games" class="btn primary games-btn">
+        🎮 Games
+      </a>
+    </div>
 
     <section class="scoreboard" aria-label="Score">
       <div class="score x-score">
         <span class="label">X</span>
         <span id="score-x" class="value">0</span>
       </div>
+
       <div class="score draws">
         <span class="label">Draw</span>
         <span id="score-draw" class="value">0</span>
       </div>
+
       <div class="score o-score">
         <span class="label">O</span>
         <span id="score-o" class="value">0</span>
       </div>
     </section>
 
-    <p id="status" class="status" role="status" aria-live="polite">X's turn</p>
+    <p id="status" class="status" role="status" aria-live="polite">
+      X's turn
+    </p>
 
     <div id="board" class="board" role="grid" aria-label="Game board">
       <button type="button" class="cell" data-index="0" aria-label="Cell 1"></button>
@@ -71,15 +84,29 @@
     </div>
 
     <div class="actions">
-      <button type="button" id="restart" class="btn primary">New game</button>
-      <button type="button" id="reset-scores" class="btn secondary">Reset scores</button>
+      <button type="button" id="restart" class="btn primary">
+        New Game
+      </button>
+
+      <button type="button" id="reset-scores" class="btn secondary">
+        Reset Scores
+      </button>
     </div>
 
     <footer class="contact">
       <p class="contact-label">Contact</p>
-      <a href="mailto:thandraan@gmail.com">thandraan@gmail.com</a>
-      <a href="https://www.linkedin.com/in/anjaneyulu-t" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+      <a href="mailto:thandraan@gmail.com">
+        thandraan@gmail.com
+      </a>
+
+      <a href="https://www.linkedin.com/in/anjaneyulu-t"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
     </footer>
+
   </main>
 
   <script src="game.js"></script>
